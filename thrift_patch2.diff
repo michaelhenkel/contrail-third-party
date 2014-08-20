@@ -1,0 +1,13 @@
+diff --git a/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.cpp b/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.cpp
+index 029c541..e2fda8d 100644
+--- a/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.cpp
++++ b/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.cpp
+@@ -348,7 +348,7 @@ void TSSLSocket::authorize() {
+ 
+ // TSSLSocketFactory implementation
+ bool     TSSLSocketFactory::initialized = false;
+-uint64_t TSSLSocketFactory::count_ = 0;
++boost::uint64_t TSSLSocketFactory::count_ = 0;
+ Mutex    TSSLSocketFactory::mutex_;
+ 
+ TSSLSocketFactory::TSSLSocketFactory(): server_(false) {

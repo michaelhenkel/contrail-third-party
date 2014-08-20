@@ -1,0 +1,21 @@
+diff --git a/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.h b/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.h
+index 82a2e91..923207f 100644
+--- a/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.h
++++ b/thrift-0.8.0/lib/cpp/src/transport/TSSLSocket.h
+@@ -21,6 +21,7 @@
+ #define _THRIFT_TRANSPORT_TSSLSOCKET_H_ 1
+ 
+ #include <string>
++#include <boost/cstdint.hpp>
+ #include <boost/shared_ptr.hpp>
+ #include <openssl/ssl.h>
+ #include <thrift/concurrency/Mutex.h>
+@@ -207,7 +208,7 @@ class TSSLSocketFactory {
+   boost::shared_ptr<AccessManager> access_;
+   static bool initialized;
+   static concurrency::Mutex mutex_;
+-  static uint64_t count_;
++  static boost::uint64_t count_;
+   void setup(boost::shared_ptr<TSSLSocket> ssl);
+   static int passwordCallback(char* password, int size, int, void* data);
+ };
