@@ -103,6 +103,7 @@
     </patches>
     <format>tgz</format>
     <md5>d29dfcd38d476cbc420b6f4d80ab966c</md5>
+    <autoreconf>true</autoreconf>
   </package>
   <package>
     <name>hiredis boostasio-adapter</name>
@@ -185,6 +186,12 @@
     <patches>
       <patch strip="0">node_v0.8.15.patch</patch>
     </patches>
+  </package>
+  <package>
+    <name>ICU - International Components for Unicode</name>
+    <url>http://download.icu-project.org/files/icu4c/52.1/icu4c-52_1-src.tgz</url>
+    <format>tgz</format>
+    <md5>9e96ed4c1d99c0d14ac03c140f9f346c</md5>
   </package>
   <package>
     <name>vijava</name>
